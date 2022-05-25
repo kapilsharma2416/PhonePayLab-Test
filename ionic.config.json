@@ -1,0 +1,7 @@
+{
+  "name": "LabTest",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
