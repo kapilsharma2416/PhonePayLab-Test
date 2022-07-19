@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons color="light" slot="start">
+      <ion-back-button color="light"></ion-back-button>
+    </ion-buttons>
+    <ion-title color="light"> Notifications </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+
+  <div class="p-2">
+
+    <ion-card  *ngFor="let member of allservices" class="border-l-4 border-red-600 p-2 bg-gray-100 shadow-md rounded-sm">
+
+      <div class="flex justify-between">
+        <div>
+          <p class="text-black text-sm"> {{member["notification"]}} </p>
+          <p class="text-gray-500 text-xs">
+            <ion-icon class="text-gray-600" name="location"></ion-icon>&nbsp;{{member["description"]}}
+          </p>
+        
+        </div>
+        <div class="flex items-center">
+          <ion-icon class="text-gray-500 text-xl" (click)="deletenoti(member['id'])" name="trash-outline"></ion-icon>
+        </div>
+      </div>
+    </ion-card>
+
+
+    
+  </div>
+</ion-content>
+<app-footer></app-footer>

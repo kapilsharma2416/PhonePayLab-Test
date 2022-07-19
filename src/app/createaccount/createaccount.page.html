@@ -1,0 +1,150 @@
+<ion-content>
+
+  <div align="center" style="margin-top: 7%;">
+    <img src="assets/registerpage.gif" width="90%" height="90%" alt="">
+  </div>
+
+  <div align="center" class="pt-10" style="margin-top: -2vh;">
+    <ion-label class="text-2xl" style="color: black;"><b>New <span style="color: #0d4168;">Here ?</span></b>
+    </ion-label><br>
+    <p class="text-xs text-gray-600">Sign up to create account</p>
+  </div>
+
+
+  <div class="p-4">
+
+    <ion-item>
+      <ion-label position="floating" class="text-sm">Full Name</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+    <!-- <div class="bg-white border-2 border-gray-300 rounded-sm pl-2">
+      <ion-input type="text" placeholder="Full Name"></ion-input>
+    </div> -->
+
+    <ion-item>
+      <ion-label position="floating" class="text-sm">Email / Username</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+    <!-- <div class="bg-white border-2 border-gray-300 rounded-sm pl-2 mt-2">
+      <ion-input type="email" placeholder="Email / Username"></ion-input>
+    </div> -->
+
+    <ion-item>
+      <ion-label position="floating" class="text-sm">Password</ion-label>
+      <ion-input type="password"
+        oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+        maxlength="8"></ion-input>
+    </ion-item>
+
+    <!-- <div class="bg-white border-2 border-gray-300 rounded-sm pl-2 mt-2">
+      <ion-input placeholder="Password" type="password"
+        oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+        maxlength="8"></ion-input>
+    </div> -->
+
+    <ion-item>
+      <ion-label position="floating" class="text-sm">Email / Username</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+
+    <div class="relative mt-2">
+      <select class="block bg-white w-full border-b-2 py-3 px-4 pr-8  " id="grid-state" [ngModel]="'Gender'">
+        <option disabled>Gender</option>
+        <option>Male</option>
+        <option> Female</option>
+        <option>Other</option>
+      </select>
+    </div>
+
+    <ion-item>
+      <ion-label position="floating" class="text-sm">Specialization</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+
+    <!-- <div class="bg-white border-2 border-gray-300 rounded-sm pl-2 mt-2">
+      <ion-input type="text" placeholder="Specialization"></ion-input>
+    </div> -->
+
+    <ion-item>
+      <ion-label position="floating" class="text-sm">State Licence No.</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+    <!-- <div class="bg-white border-2 border-gray-300 rounded-sm pl-2 mt-2">
+      <ion-input type="text" placeholder="State Licence No."></ion-input>
+    </div> -->
+
+    <ion-item>
+      <ion-label position="floating" class="text-sm">NPI No.</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+    <!-- <div class="bg-white border-2 border-gray-300 rounded-sm pl-2 mt-2">
+      <ion-input type="text" placeholder="NPI No."></ion-input>
+    </div> -->
+
+    <ion-item>
+      <ion-label position="floating" class="text-sm">Lab Registration</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+
+    <!-- <div class="bg-white border-2 border-gray-300 rounded-sm pl-2 mt-2">
+      <ion-input type="text" placeholder=" Lab Registration"></ion-input>
+    </div> -->
+
+    <ion-item>
+      <ion-label position="floating" class="text-sm">Office Address</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+
+    <!-- <div class="bg-white border-2 border-gray-300 rounded-sm pl-2 mt-2">
+      <ion-input type="text" placeholder="Office Address"></ion-input>
+    </div> -->
+
+    <ion-item>
+      <ion-label position="floating" class="text-sm">Work Phone</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+
+    <!-- <div class="bg-white border-2 border-gray-300 rounded-sm pl-2 mt-2">
+      <ion-input type="number" placeholder="Work Phone"></ion-input>
+    </div> -->
+
+    <ion-item>
+      <ion-label position="floating" class="text-sm">Fax No.</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+
+    <!-- <div class="bg-white border-2 border-gray-300 rounded-sm pl-2 mt-2">
+      <ion-input type="number" placeholder="Fax No."></ion-input>
+    </div> -->
+
+    <div class="pt-3" routerLink="/dashboard">
+      <button expand="block" class="btn-3 w-full p-4 text-white rounded-sm text-xs">
+        Create Account
+      </button>
+    </div>
+
+    <div align="center" class=" mt-5" routerLink="/login">
+      <p class="text-sm pl-1 mt-3" style="font-size: 12px; ">Already have an account?
+        <b style="color: #0d4168;">Login</b></p>
+
+    </div>
+    <!-- <div class="pt-2" align="center" routerLink="/createaccount">
+      <p class="text-xs text-gray-600">Already have an account ?<b style="color: #1B55E2;">Login</b></p>
+    </div> -->
+  </div>
+
+
+
+  <!-- <div class=" p-4 pt-2 pl-6 pr-6" routerLink="/dashboard">
+    <button expand="block" class="btn-3 w-full p-2 text-white rounded-sm">
+      Create Account <ion-icon class="shake-horizontal ml-3" color="light" slot="end" name="arrow-forward-outline">
+      </ion-icon>
+    </button>
+  </div>
+  <div class="pb-10 " style="margin-left: 6%; margin-top: -10px; " routerLink="/login">
+    <p class="text-sm pl-1 " style="font-size: 12px; " routerLink="/login">Already have an account? <b
+        class="text-blue-600 ">Login</b></p>
+
+  </div> -->
+
+</ion-content>

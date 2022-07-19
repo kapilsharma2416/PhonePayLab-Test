@@ -1,0 +1,67 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons color="light" slot="start">
+      <ion-back-button color="light"></ion-back-button>
+    </ion-buttons>
+    <ion-title color="light"> Lab Details </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="p-2">
+    <div class="pt-2">
+      <ion-slides class="slider" [options]="slideOptions11" pager="true" #slider
+        (ionSlidesDidLoad11)="slidesDidLoad11(slider)">
+        <ion-slide *ngFor="let slider of allslider">
+          <img class=" img2 mb-8 rounded-md" src="{{this.url.imageUrl+slider['slider']}}" />
+        </ion-slide>
+       
+      </ion-slides>
+    </div>
+
+    <div class="p-2">
+      <ion-label><b>{{labname}}</b></ion-label>
+      <p>
+        <ion-icon class="text-green-600 text-sm" name="location-outline"></ion-icon> &nbsp; {{address}}
+      </p>
+      <p>
+        <ion-icon class="text-green-600 text-sm" name="timer-outline"></ion-icon> &nbsp; <span><b>Open :</b> {{labopen}}</span>
+        &nbsp;
+        <span><b>Close :</b> {{labclose}}</span>
+      </p>
+    </div>
+
+    <ion-card *ngFor="let services of allservices"
+      class="rounded-md hover:rounded-md border-2 border-gray-50 hover:border-blue-100 shadow-sm hover:shadow-md">
+      <ion-row>
+        <ion-col size="4">
+          <img class="img rounded-md" src="{{this.url.imageUrl+services['image']}}" />
+        </ion-col>
+        <ion-col size="7">
+          <ion-label class="text-black text-lg"><b></b></ion-label><br>
+          <span class="text-black font-bold text-sm">₹ {{services["amount"]}}</span>&nbsp;
+          <span style="text-decoration: line-through; color: gray; " class="text-sm">₹ {{services["amount"]}}</span>&nbsp;
+          <span class="text-blue-600 text-sm">{{services["discount"]}} % off</span><br>
+
+          <p class="text-xs text-gray-600">
+            {{services["description"]}}
+          </p>
+        </ion-col>
+        <ion-col size="1">
+          <ion-checkbox name="{{services['serviceid']}}" (ionChange) = "onChange($event, i)" class="text-gray-100 " color="light" ngModel="false"></ion-checkbox>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+
+   
+
+    <div class=" p-4 pl-5 pr-5" style="margin-top: 2%;" routerLink="/testdetails">
+      <button expand="block" class="btn-3 w-full p-4 text-white rounded-sm text-xs">
+        Next
+      </button>
+    </div>
+  </div>
+
+
+</ion-content>
+<app-footer></app-footer>

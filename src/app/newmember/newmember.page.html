@@ -1,0 +1,80 @@
+
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons color="light" slot="start">
+      <ion-back-button color="light"></ion-back-button>
+    </ion-buttons>
+    <ion-title color="light"> Add Member </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form #form_login="ngForm">
+  <div class="mt-8">
+    <div align="center">
+      <img class="profile" src="assets/profile1.png" />
+    </div>
+  </div>
+
+  <ion-row class="p-4">
+    <ion-col size="12">
+      <div class="bg-white border-2 border-gray-300 rounded-sm">
+        <ion-input placeholder="First Name" name="fname" value="fname" ngModel></ion-input>
+      </div>
+    </ion-col>
+
+    <ion-col size="12">
+      <div class="bg-white border-2 border-gray-300 rounded-sm">
+        <ion-input placeholder="Last Name" name="lname" value="lname" ngModel></ion-input>
+      </div>
+    </ion-col>
+
+    <ion-col size="12">
+      <div class="bg-white border-2 border-gray-300 rounded-sm">
+        <ion-input placeholder="Age" name="age" value="age" ngModel></ion-input>
+      </div>
+    </ion-col>
+
+    <ion-col size="12">
+      <div class="bg-white border-2 border-gray-300 rounded-sm">
+        <ion-input type="email" name="email" value="email" placeholder="Email" ngModel></ion-input>
+      </div>
+    </ion-col>
+
+    <ion-col size="12">
+      <div class="bg-white border-2 border-gray-300">
+        <div class="relative">
+          <select name="gender" value="gender" class="block bg-white w-full border border-gray-400 text-gray-700 py-3 px-4 pr-8  " id="grid-state"
+            [ngModel]="'Gender'">
+            <option disabled>Gender</option>
+            <option>Female</option>
+            <option>Male</option>
+            <option>Other</option>
+          </select>
+        </div>
+      </div>
+    </ion-col>
+
+
+    <ion-col size="12">
+      <div class="bg-white border-2 border-gray-300 rounded-sm">
+        <ion-input type="date" name="dob" value="dob" placeholder="Date Of Birth" ngModel></ion-input>
+      </div>
+    </ion-col>
+
+
+    <ion-col size="12">
+      <div class="bg-white border-2 border-gray-300 rounded-sm">
+        <ion-input placeholder="Mobile Number" name="mobile" value="mobile" ngModel></ion-input>
+      </div>
+    </ion-col>
+  </ion-row>
+
+  <div class=" p-4 pt-2 pl-6 pr-6">
+    <button expand="block" (click)="verify_submit(form_login)" class="btn-3 w-full p-3 text-white rounded-sm text-xs">
+      Add Family Member
+    </button>
+  </div>
+</form>
+</ion-content>
+<app-footer></app-footer>

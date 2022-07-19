@@ -1,0 +1,39 @@
+<ion-content>
+
+    <div align="center" style="margin-top: 5%;">
+        <img src="assets/forgot.png" width="25%" height="25%" alt="">
+    </div>
+
+    <div align="center" class="pt-10" style="margin-top: -5vh;">
+        <div align="center">
+            <ion-label class="text-2xl" style="color: #428cff;"><b>Create a new password ?</b></ion-label><br>
+            <ion-label class="text-sm" style="color: #51cab2;">Enter your new password</ion-label>
+        </div>
+
+        <ion-row class="pl-4 pr-4 pt-2">
+            <ion-col size="12">
+                <div class="bg-white border-2 border-gray-300 rounded-sm">
+                    <ion-input placeholder="New Password"></ion-input>
+                </div>
+            </ion-col>
+        </ion-row>
+
+        <ion-row class="pl-4 pr-4">
+            <ion-col size="12">
+                <div class="bg-white border-2 border-gray-300 rounded-sm">
+                    <ion-input placeholder="Confirm Password"></ion-input>
+                </div>
+            </ion-col>
+        </ion-row>
+
+
+
+        <div class=" p-4 pt-4 pl-6 pr-6" routerLink="/dashboard">
+            <button expand="block" class="btn-3 w-full p-2 text-white rounded-sm">
+      Update Password <ion-icon class="shake-horizontal ml-3" color="light" slot="end" name="arrow-forward-outline">
+      </ion-icon>
+    </button>
+        </div>
+    </div>
+
+</ion-content>

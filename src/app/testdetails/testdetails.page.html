@@ -1,0 +1,92 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons color="light" slot="start">
+      <ion-back-button color="light"></ion-back-button>
+    </ion-buttons>
+    <ion-title color="light"> Test Details </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+
+
+  <div class="pl-5 pr-5 mt-4">
+  </div>
+  <div class="pl-5 pr-5 mt-4">
+    <div class="relative">
+      <select class="block bg-white w-full border-b-2 border-gray-400 text-gray-700 py-3 px-4 pr-8  " id="grid-state"
+        [ngModel]="'Select Member'">
+        <option disabled>Select Member</option>
+        <option>Vaibhav Fuke</option>
+        <option>Mayur Wankhade</option>
+        <option>John Wan</option>
+        <option>Diksha Panzade</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="pl-5 pr-5 mt-4">
+    <span class="text-gray-500 text-sm">Date of test</span>
+    <input type="date" value="2017-01-01" min="2005-01-01" max="2019-01-01">
+  </div>
+
+  <ion-row class="p-4">
+    <ion-col size="12">
+      <textarea name="" id="" cols="" rows="5" placeholder="Description (if any)"
+        class="rounded-sm border-b-2 border-gray-200 w-full"></textarea>
+    </ion-col>
+  </ion-row>
+
+
+  <div class="border-t-2 border-gray-300 p-2">
+
+    <ion-item>
+      <ion-label>DNA Test</ion-label>
+      <ion-note slot="end" color="primary" class="text-sm">₹ 100</ion-note>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Sugar Test</ion-label>
+      <ion-note slot="end" color="primary" class="text-sm">₹ 100</ion-note>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>RBC Test</ion-label>
+      <ion-note slot="end" color="primary" class="text-sm">₹ 100</ion-note>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-label><b>Total Amount</b></ion-label>
+      <ion-note slot="end" color="danger" class="text-lg ">₹ 300</ion-note>
+    </ion-item>
+  </div>
+
+  <div class="flex justify-between p-2">
+    <div class="flex-1 flex items-center pl-4">
+      <ion-label><b>Add Coupon</b></ion-label>
+    </div>
+    <div class="flex-1">
+      <ion-item lines="none" class="border-2 border-gray-300 rounded-md">
+        <ion-input></ion-input>
+      </ion-item>
+    </div>
+  </div>
+
+  <div class=" p-2" align="center">
+    <input type="file" id="file" />
+    <label for="file" class="btn-3">
+      <span class="flex items-center">
+        <ion-icon class="heartbeat text-2xl" name="cloud-upload"></ion-icon> &nbsp; Prescription Upload
+      </span>
+    </label>
+  </div>
+
+
+  <div class=" p-4 pl-5 pr-5" style="margin-top: 2%;">
+    <button expand="block" class="btn-3 w-full p-4 text-white rounded-sm text-xs">
+      Book Test
+    </button>
+  </div>
+</ion-content>
+<app-footer></app-footer>

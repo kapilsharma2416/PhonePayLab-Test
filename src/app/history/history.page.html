@@ -1,0 +1,91 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons color="light" slot="start">
+      <ion-back-button color="light"></ion-back-button>
+    </ion-buttons>
+    <ion-title color="light"> History </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+
+  <div class="pl-5 pr-5 mt-4">
+    <div class="relative">
+      
+      <ion-select  class="block bg-white w-full border-b-2 py-3 px-4 pr-8  " id="grid-state" [ngModel]="'Select Member'" required value="{{allservices['id']}}" interface="action-sheet"
+          *ngIf="allservices != undefined">
+          <ion-select-option value=>Select Member</ion-select-option>
+          <ion-select-option *ngFor="let allservices of allservices" value="{{allservices['id']}}"> {{allservices["fname"]+ " "+allservices["lname"]}}</ion-select-option>
+        </ion-select>
+    </div>
+  </div>
+  <br>
+
+  <!-- ==============
+          1nd Card
+       ==============    -->
+  <div class="p-2">
+    <ion-card class="bg-white rounded-md border-2 border-gray-300 shadow-md">
+      <div class="flex justify-between p-2">
+        <ion-label class="text-blue-700 text-2xl">Sai Lab</ion-label>
+        <ion-label class="flex items-center">Today</ion-label>
+      </div>
+      <div class="p-2">
+        <div class="flex justify-between border-b-2 border-gray-200 p-2">
+          <ion-label>Name :</ion-label>
+          <ion-label>Nilesh Kumar</ion-label>
+        </div>
+      </div>
+      <div class=" p-2">
+        <div class="flex justify-between border-b-2 border-gray-200 p-2">
+          <ion-label>Address :</ion-label>
+          <ion-label>Rathi Nagar</ion-label>
+        </div>
+      </div>
+      <div class="p-2">
+        <div class="flex justify-between border-b-2 border-gray-200 p-2">
+          <ion-label>Report Name :</ion-label>
+          <ion-label>RCB Test</ion-label>
+        </div>
+      </div>
+      <div class="p-2">
+        <div class="flex justify-between border-b-2 border-gray-200 p-2">
+          <ion-label>Mobile No. :</ion-label>
+          <ion-label>7876789087</ion-label>
+        </div>
+      </div>
+      <div class="p-2">
+        <div class="flex justify-between border-b-2 border-gray-200 p-2">
+          <ion-label>Date of test :</ion-label>
+          <ion-label>10 June 2020</ion-label>
+        </div>
+      </div>
+      <div class="p-2">
+        <div class="flex justify-between border-b-2 border-gray-200 p-2">
+          <ion-label>Date of Issude :</ion-label>
+          <ion-label>12 June 2020</ion-label>
+        </div>
+      </div>
+      <div class="flex justify-between border-b-2 border-gray-400  pl-4 pr-4 pt-2 pb-2">
+        <ion-label>Date of Issude :</ion-label>
+        <ion-label>12 June 2020</ion-label>
+      </div>
+      <ion-grid fixed>
+        <ion-row>
+          <ion-col size="6" style=" margin-top: 5px;">
+            <button class="btn_1" expand="block">
+              Download Prescription
+            </button>
+          </ion-col>
+          <ion-col size="6" style=" margin-top: 5px;">
+            <button class="btn_1" expand="block">
+              Download Report
+            </button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card>
+  </div>
+</ion-content>
+
+
+<app-footer></app-footer>

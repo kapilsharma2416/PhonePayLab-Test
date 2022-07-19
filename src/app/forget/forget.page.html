@@ -1,0 +1,45 @@
+<ion-content>
+
+    <div routerLink="/login" class="pt-5 pl-5">
+
+    </div>
+
+    <div align="center" style="margin-top: 5%;">
+        <img src="assets/forgot.png" width="25%" height="25%" alt="">
+    </div>
+
+    <div align="center" class="pt-10" style="margin-top: -5vh;">
+        <ion-label class="text-2xl" style="color: #428cff;"><b>Forgot Password ?</b></ion-label><br>
+        <ion-label class="text-sm text-white" style="color: #428cff;">Enter your mobile number to get OTP.</ion-label>
+    </div>
+
+    <ion-row class="p-4">
+        <ion-col size="12">
+            <div class="bg-white border-2 border-gray-300 rounded-sm">
+                <ion-input placeholder="Mobile Number"></ion-input>
+            </div>
+        </ion-col>
+    </ion-row>
+
+    <!-- <div class="col-3 input-effect">
+  <input class="effect-19" type="number" placeholder="Mobile Number"
+    oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+    maxlength="10">
+  <label></label>
+  <span class="focus-border">
+    <i></i>
+  </span>
+</div> -->
+
+    <div class=" p-4 pt-2 pl-6 pr-6" routerLink="/verifyotp">
+        <button expand="block" class="btn-3 w-full p-2 text-white rounded-sm">
+    Send OTP <ion-icon class="shake-horizontal ml-3" color="light" slot="end" name="arrow-forward-outline">
+    </ion-icon>
+  </button>
+        <!-- <ion-button class="w-full -mt-5" expand="block" color="primary">
+    Send OTP <ion-icon class="shake-horizontal ml-3" color="light" slot="end" name="arrow-forward-outline">
+    </ion-icon>
+  </ion-button> -->
+    </div>
+
+</ion-content>

@@ -1,0 +1,33 @@
+.footer_div {
+    // background: linear-gradient(90deg, #4BE3C1, #1E9EEB);
+    // background-image: linear-gradient(to right, #3780ed 0%, #3780ed 5%, #3780ed 100%);
+    // --background: linear-gradient(to right,  #3780ed 0%, #3780ed 5%, #3780ed 100%);
+    // background-image: linear-gradient(to right,  #026CD9 0%, #026CD9 5%, #026CD9 100%);
+    background-image: linear-gradient(to right,  #0d4168 0%, #0d4168 5%, #0c5b86 100%);
+}
+
+// ion-tab-bar {
+//     bottom: 20px;
+//     position: relative;
+//     border-radius: 16px;
+//     width: 92%;
+//     margin: 0 auto;
+//   }
+  
+//   ion-tab-button {
+//     --color: var(--ion-color-medium);
+//     --color-selected: var(--ion-color-primary);
+  
+//     &::before {
+//       background-color: transparent;
+//       display: block;
+//       content: "";
+//       margin: 0 auto;
+//       width: 20px;
+//       height: 2px;
+//     }
+  
+//     &.tab-selected::before {
+//       background-color: var(--ion-color-primary);
+//     }
+//   }

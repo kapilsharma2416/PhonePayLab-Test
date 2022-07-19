@@ -1,0 +1,59 @@
+<ion-content>
+<form #form_login="ngForm">
+<div *ngIf="isShown">
+  <div   align="center" style="margin-top: 7%;">
+    <img src="assets/loginpage.gif" width="90%" height="90%" alt="">
+  </div>
+
+  <div align="center" class="pt-10" style="margin-top: 3vh;">
+    <ion-label class="text-2xl" style="color: black;"><b>Welcome To <span style="color: #0d4168;">LABTEST</span></b>
+    </ion-label><br>
+    <p class="text-xs text-gray-600">Sign in to your account</p>
+  </div>
+
+  <div class="p-4 ">
+    <ion-item>
+      <ion-label position="floating" class="text-sm">Mobile Number</ion-label>
+      <ion-input type="number" name="contact_no" value="contact_no" ngModel></ion-input>
+    </ion-item>
+
+    <div class="pt-3">
+      <button expand="block" (click)="login_submit(form_login)" class="btn-3 w-full p-4 text-white rounded-sm text-xs">
+        Login
+      </button>
+    </div>
+  </div>
+</div>
+  <div *ngIf="isShown1">
+    <div align="center" style="margin-top: 5%;">
+      <img src="assets/verifypage.gif" width="90%" height="90%" alt="">
+    </div>
+  
+    <div align="center" class="pt-10" style="margin-top: -3vh;">
+      <ion-label class="text-2xl" style="color: black;"><b>Enter The <span style="color: #0d4168;">Verification
+            Code</span></b>
+      </ion-label><br>
+      <p class="text-xs text-gray-600">Enter the 4 digit OTP number</p>
+    </div>
+  
+    <div class="p-4">
+  
+      <ion-grid fixed>
+        <ion-row>
+          <ion-item>
+            <ion-label position="floating" class="text-sm">Verify Otp</ion-label>
+            <ion-input type="number" name="a" value="a" ngModel></ion-input>
+          </ion-item>
+         
+        </ion-row>
+      </ion-grid>
+  
+      <div class="pt-3 pl-2 pr-2" >
+        <button expand="block" (click)="verify_submit(form_login)" class="btn-3 w-full p-4 text-white rounded-sm text-xs">
+          Verify OTP
+        </button>
+      </div>
+    </div>
+  </div>
+  </form>
+</ion-content>
